@@ -1,0 +1,143 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<f:view contentType="text/html">
+	<h:head>
+		<title>Profesores</title>
+		<link type="text/css" rel="stylesheet"
+			href="#{request.contextPath}/css/default.css" />
+		<link type="text/css" rel="stylesheet"
+			href="#{request.contextPath}/css/icons.css" />
+		<script type="text/javacsript"
+			src="#{request.contextPath}/js/jquery-2.1.3.js"></script>
+		<script type="text/javacsript" src="#{request.contextPath}/js/util.js"></script>
+		<style type="text/css">
+			.fieldInputForm {
+				width: 200px;
+			}
+		</style>
+	</h:head>
+	<h:body>
+		<h:form>
+		
+		<p:panel id="Profesores" header="Lista de Profesores"
+				styleClass="panelBusquedaForm" toggleable="false" closable="false"
+				toggleSpeed="500" closeSpeed="2000" widgetVar="panel">
+				
+				<table>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td><p:outputLabel value="DNI:" /></td>
+									<td><p:inputText value=""/></td>					
+								</tr>
+								<tr>
+									<td><p:outputLabel value="Nombres:" /></td>
+									<td><p:inputText value=""/></td>					
+								</tr>
+								<tr>
+									<td><p:outputLabel value="Apellidos:" /></td>
+									<td><p:inputText value=""/></td>					
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td>
+										<p:outputLabel value="Cargo:" />
+										<p:selectOneRadio id="idCargo" value="Cargo"  layout="grid" columns="1">
+            								<f:selectItem itemValue="Todos" itemLabel="Todos"/>
+            								<f:selectItem itemValue="Profesores" itemLabel="Profesores"/>
+        								</p:selectOneRadio>
+        							</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td>
+										<p:outputLabel value="Estado:" />
+										<p:selectOneRadio id="idEstado" value="Estado"  layout="grid" columns="1">
+            								<f:selectItem itemValue="Activo" itemLabel="Activo"/>
+            								<f:selectItem itemValue="Inactivo" itemLabel="Inactivo"/>
+        								</p:selectOneRadio>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td>
+										<p:outputLabel value="Operaciones:" />
+										<p:commandButton id="btnNuevo"								
+										value="Nuevo" styleClass="buttonForm"/>
+										<p:commandButton id="btnEditar"								
+										value="Editar" styleClass="buttonForm"/>
+										<p:commandButton id="btnBaja"								
+										value="Dar de baja" styleClass="buttonForm"/>
+										<p:commandButton id="btnAlta"								
+										value="Dar de alta" styleClass="buttonForm"/>										
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+				
+				
+		</p:panel>
+		
+		<p:panel id="idTabaProfesores" 
+				styleClass="panelTabla" toggleable="false" closable="false"
+				toggleSpeed="500" closeSpeed="2000" widgetVar="panel">
+				
+			<p:dataTable var="car" value="">
+			   
+			    <p:column headerText="Id" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			 
+			    <p:column headerText="Nombres" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			 
+			    <p:column headerText="Apellido Paterno" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			 
+			    <p:column headerText="Apellido Materno" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			    
+			    <p:column headerText="DNI" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			    
+			    <p:column headerText="Celular" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			    
+			    <p:column headerText="Cargo" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			    
+			    <p:column headerText="Fecha Registro" styleClass="panelTabla">
+			        <h:outputText value="" />
+			    </p:column>
+			    
+			</p:dataTable>
+				
+		</p:panel>
+		
+		</h:form>
+	</h:body>
+	</f:view>
+</html>
