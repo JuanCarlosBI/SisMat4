@@ -6,5 +6,5 @@ import com.juancarlos.sismat.dao.AlumnoDao;
 
 @Repository
 public class AlumnoDaoImpl implements AlumnoDao {
-
+String a;
 }
